@@ -1,5 +1,5 @@
-# Aryan Mishra — Personal Portfolio
-
+# Aryan Mishra — Personal Portfolio 
+💻
 A responsive, fresher-friendly AI/ML portfolio built with HTML, CSS and JavaScript.
 
 ## Included
