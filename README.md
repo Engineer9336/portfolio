@@ -21,4 +21,4 @@ A responsive, fresher-friendly AI/ML portfolio built with HTML, CSS and JavaScri
 Visit the live site: https://engineer9336.github.io/portfolio/
 
 ## Notes
-Portfolio content was based my personal Infomation So please don't use it for your personal work.
+Portfolio content was based on my personal Information So, please don't use it for your personal work.
