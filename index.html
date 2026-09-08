@@ -129,7 +129,7 @@
 
       <div class="hero-visual reveal">
 
-        <div class="profile-frame">
+        <div class="profile-frame enhanced-profile-frame">
 
           <div class="profile-ring"></div>
 
@@ -562,19 +562,17 @@
       </div>
 
 
-      <!-- ADD MORE PROJECTS -->
+      <!-- ADD PROJECT -->
       <div class="more-projects reveal">
 
         <button
           type="button"
-          class="more-btn"
-          id="moreProjects">
-          ＋ Add More Projects Later
+          class="more-btn add-project-btn"
+          id="addProjectBtn">
+          <span>＋</span> Add Project
         </button>
 
-        <p
-          id="moreProjectsText"
-          hidden>
+        <p id="moreProjectsText" hidden>
           More projects will be added here as the portfolio grows.
         </p>
 
@@ -707,50 +705,97 @@
 
         <!-- CERTIFICATIONS -->
         <div>
-          <h2 class="subsection-title reveal">Certifications</h2>
+
+          <h2 class="subsection-title reveal">
+            Certifications
+          </h2>
+
 
           <div class="cert-list">
-            <button class="cert-card reveal" type="button"
-              data-cert="https://cdn1.ccbp.in/misc/workshop-openai-nxtwave-buildathon-genai-online-workshop-participation/V8UVVJ9SR9.png"
-              data-title="Generative AI Mastery Workshop"
-              data-provider="NXT Wave"
-              data-type="image">
-              <div><span>2025</span><h3>Generative AI Mastery Workshop</h3><p>NXT Wave</p></div><b>↗</b>
-            </button>
 
-            <button class="cert-card reveal" type="button"
-              data-cert="https://www.futureskillsprime.in/iDH/user/credential/view/32914-d2db956e-89bc-11f1-bcca-005056b48b54"
-              data-title="Exploratory Data Analysis"
-              data-provider="NASSCOM FutureSkills Prime"
-              data-type="page">
-              <div><span>2026</span><h3>Exploratory Data Analysis</h3><p>NASSCOM FutureSkills Prime</p></div><b>↗</b>
-            </button>
 
-            <button class="cert-card reveal" type="button"
-              data-cert="https://coursera.org/share/058de2ea658a33d26c49e548c6a832b0"
-              data-title="Generative AI: Introduction and Applications"
-              data-provider="IBM"
-              data-type="page">
-              <div><span>2025</span><h3>Generative AI: Introduction and Applications</h3><p>IBM</p></div><b>↗</b>
-            </button>
+            <a
+              class="cert-card reveal"
+              href="https://cdn1.ccbp.in/misc/workshop-openai-nxtwave-buildathon-genai-online-workshop-participation/V8UVVJ9SR9.png"
+              target="_blank"
+              rel="noopener">
+
+              <div>
+
+                <span>2025</span>
+
+                <h3>
+                  Generative AI Mastery Workshop
+                </h3>
+
+                <p>
+                  NXT Wave
+                </p>
+
+              </div>
+
+              <b>↗</b>
+
+            </a>
+
+
+            <a
+              class="cert-card reveal"
+              href="https://www.futureskillsprime.in/iDH/user/credential/view/32914-d2db956e-89bc-11f1-bcca-005056b48b54"
+              target="_blank"
+              rel="noopener">
+
+              <div>
+
+                <span>2026</span>
+
+                <h3>
+                  Exploratory Data Analysis
+                </h3>
+
+                <p>
+                  NASSCOM FutureSkills Prime
+                </p>
+
+              </div>
+
+              <b>↗</b>
+
+            </a>
+
+             <a
+             class="cert-card reveal"
+             href="https://coursera.org/share/058de2ea658a33d26c49e548c6a832b0"
+             target="_blank"
+             rel= "noopener">
+               
+
+              <div>
+
+                <span>2025</span>
+
+                <h3>
+                  Generative AI: Introduction and Applications
+                </h3>
+
+                <p>
+                  IBM
+                </p>
+
+              </div>
+
+              <b>↗</b>
+
+            </a>
+
           </div>
         </div>
 
       </div>
-    </section>
 
-    <!-- CERTIFICATE VIEWER -->
-    <div class="cert-modal" id="certModal" hidden aria-hidden="true">
-      <div class="cert-modal-backdrop" data-close-cert></div>
-      <div class="cert-modal-box" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-        <button class="cert-modal-close" type="button" data-close-cert aria-label="Close certificate">×</button>
-        <div class="cert-modal-head">
-          <div><span id="certModalProvider"></span><h2 id="certModalTitle"></h2></div>
-          <a id="certModalOpen" href="#" target="_blank" rel="noopener">Open original ↗</a>
-        </div>
-        <div class="cert-viewer" id="certViewer"></div>
-      </div>
-    </div>
+        
+
+    </section>
 
 
     <!-- INTERESTS -->
@@ -872,6 +917,76 @@
 
   </main>
 
+
+  <!-- ADD PROJECT MODAL -->
+  <div id="projectModal" class="project-modal" aria-hidden="true">
+    <div class="project-modal-content" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+
+      <button type="button" class="project-modal-close" id="closeProjectModal" aria-label="Close">
+        &times;
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-icon">🚀</div>
+        <div>
+          <p class="modal-kicker">PORTFOLIO</p>
+          <h2 id="projectModalTitle">Add New Project</h2>
+          <p>Keep your project details ready for your next portfolio update.</p>
+        </div>
+      </div>
+
+      <form id="projectForm">
+        <div class="form-group">
+          <label for="projectName">Project Name</label>
+          <input type="text" id="projectName" placeholder="e.g. AI Threat Detection System">
+        </div>
+
+        <div class="form-group">
+          <label for="projectDescription">Project Description</label>
+          <textarea id="projectDescription" rows="4" placeholder="Write a short description of your project..."></textarea>
+        </div>
+
+        <div class="upload-row">
+          <div class="upload-box">
+            <div class="upload-icon">📸</div>
+            <h3>Project Screenshot</h3>
+            <p>Choose an image for the project card.</p>
+            <label for="projectImage" class="upload-btn">Choose Image</label>
+            <input type="file" id="projectImage" accept="image/*" hidden>
+            <small id="projectImageName" class="file-name"></small>
+          </div>
+
+          <div class="upload-box">
+            <div class="upload-icon">🎥</div>
+            <h3>Project Video</h3>
+            <p>Choose a demo video for your project.</p>
+            <label for="projectVideo" class="upload-btn">Choose Video</label>
+            <input type="file" id="projectVideo" accept="video/*" hidden>
+            <small id="projectVideoName" class="file-name"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="githubLink">GitHub Link</label>
+          <input type="url" id="githubLink" placeholder="https://github.com/username/project">
+        </div>
+
+        <div class="form-group">
+          <label for="liveLink">Live Demo Link <span>(optional)</span></label>
+          <input type="url" id="liveLink" placeholder="https://your-project.com">
+        </div>
+
+        <div class="modal-note">
+          <span>ℹ</span> This is a preview form for now. It does not publish or permanently save a new project yet.
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="cancel-btn" id="cancelProject">Cancel</button>
+          <button type="submit" class="save-project-btn"><span>＋</span> Add Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
