@@ -241,3 +241,132 @@ footer{display:flex;justify-content:space-between;padding:25px 5vw;border-top:1p
   .modal-actions { flex-direction:column-reverse; }
   .cancel-btn,.save-project-btn { width:100%; }
 }
+
+/* =========================================================
+   PREMIUM SECTION CARDS / REDUCED EMPTY SPACE
+========================================================= */
+main > .section.section-shell {
+  position: relative;
+  width: min(var(--max), 92%);
+  margin: 28px auto;
+  padding: 58px clamp(22px, 4vw, 52px);
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(125,167,255,.055), transparent 28%),
+    radial-gradient(circle at 8% 90%, rgba(100,231,196,.035), transparent 30%),
+    linear-gradient(145deg, rgba(14,27,44,.86), rgba(8,18,31,.78));
+  box-shadow:
+    0 22px 70px rgba(0,0,0,.20),
+    inset 0 1px 0 rgba(255,255,255,.025);
+  overflow: hidden;
+}
+
+main > .section.section-shell::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: -130px;
+  right: -80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100,231,196,.075), transparent 68%);
+  pointer-events: none;
+}
+
+main > .section.section-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,.018), transparent 35%, transparent 70%, rgba(125,167,255,.018));
+}
+
+main > .section.section-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+main > .section.section-shell + .section.section-shell {
+  margin-top: 28px;
+}
+
+.section-label {
+  margin-bottom: 28px;
+}
+
+.section-heading-row {
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  gap: 16px;
+}
+
+.projects-grid {
+  gap: 16px;
+}
+
+.education-list,
+.achievement-list,
+.cert-list {
+  gap: 12px;
+}
+
+/* Give inner cards a cleaner layered-glass look */
+.skill-card,
+.project-card,
+.education-item,
+.cert-card,
+.list-item {
+  background: rgba(8,18,31,.52);
+  border-color: rgba(255,255,255,.085);
+}
+
+.skill-card:hover,
+.project-card:hover,
+.education-item:hover,
+.cert-card:hover {
+  border-color: rgba(100,231,196,.28);
+}
+
+/* Contact: outer section already acts as the large card */
+.contact-section .contact-card {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 25px 15px 10px;
+}
+
+/* Interests: make the cloud feel like part of the card */
+.interest-cloud {
+  padding: 18px;
+}
+
+/* Keep section rhythm compact */
+#about .two-column,
+#achievements .two-column {
+  gap: 48px;
+}
+
+@media (max-width: 700px) {
+  main > .section.section-shell {
+    width: min(94%, var(--max));
+    margin: 18px auto;
+    padding: 40px 18px;
+    border-radius: 21px;
+  }
+
+  main > .section.section-shell + .section.section-shell {
+    margin-top: 18px;
+  }
+
+  .section-label {
+    margin-bottom: 22px;
+  }
+
+  .contact-section .contact-card {
+    padding: 15px 0 5px;
+  }
+}
