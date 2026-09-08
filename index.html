@@ -707,97 +707,50 @@
 
         <!-- CERTIFICATIONS -->
         <div>
-
-          <h2 class="subsection-title reveal">
-            Certifications
-          </h2>
-
+          <h2 class="subsection-title reveal">Certifications</h2>
 
           <div class="cert-list">
+            <button class="cert-card reveal" type="button"
+              data-cert="https://cdn1.ccbp.in/misc/workshop-openai-nxtwave-buildathon-genai-online-workshop-participation/V8UVVJ9SR9.png"
+              data-title="Generative AI Mastery Workshop"
+              data-provider="NXT Wave"
+              data-type="image">
+              <div><span>2025</span><h3>Generative AI Mastery Workshop</h3><p>NXT Wave</p></div><b>↗</b>
+            </button>
 
+            <button class="cert-card reveal" type="button"
+              data-cert="https://www.futureskillsprime.in/iDH/user/credential/view/32914-d2db956e-89bc-11f1-bcca-005056b48b54"
+              data-title="Exploratory Data Analysis"
+              data-provider="NASSCOM FutureSkills Prime"
+              data-type="page">
+              <div><span>2026</span><h3>Exploratory Data Analysis</h3><p>NASSCOM FutureSkills Prime</p></div><b>↗</b>
+            </button>
 
-            <a
-              class="cert-card reveal"
-              href="https://cdn1.ccbp.in/misc/workshop-openai-nxtwave-buildathon-genai-online-workshop-participation/V8UVVJ9SR9.png"
-              target="_blank"
-              rel="noopener">
-
-              <div>
-
-                <span>2025</span>
-
-                <h3>
-                  Generative AI Mastery Workshop
-                </h3>
-
-                <p>
-                  NXT Wave
-                </p>
-
-              </div>
-
-              <b>↗</b>
-
-            </a>
-
-
-            <a
-              class="cert-card reveal"
-              href="https://www.futureskillsprime.in/iDH/user/credential/view/32914-d2db956e-89bc-11f1-bcca-005056b48b54"
-              target="_blank"
-              rel="noopener">
-
-              <div>
-
-                <span>2026</span>
-
-                <h3>
-                  Exploratory Data Analysis
-                </h3>
-
-                <p>
-                  NASSCOM FutureSkills Prime
-                </p>
-
-              </div>
-
-              <b>↗</b>
-
-            </a>
-
-             <a
-             class="cert-card reveal"
-             href="https://coursera.org/share/058de2ea658a33d26c49e548c6a832b0"
-             target="_blank"
-             rel= "noopener">
-               
-
-              <div>
-
-                <span>2025</span>
-
-                <h3>
-                  Generative AI: Introduction and Applications
-                </h3>
-
-                <p>
-                  IBM
-                </p>
-
-              </div>
-
-              <b>↗</b>
-
-            </div>
-
+            <button class="cert-card reveal" type="button"
+              data-cert="https://coursera.org/share/058de2ea658a33d26c49e548c6a832b0"
+              data-title="Generative AI: Introduction and Applications"
+              data-provider="IBM"
+              data-type="page">
+              <div><span>2025</span><h3>Generative AI: Introduction and Applications</h3><p>IBM</p></div><b>↗</b>
+            </button>
           </div>
         </div>
 
       </div>
-
-        
-
     </section>
+
+    <!-- CERTIFICATE VIEWER -->
+    <div class="cert-modal" id="certModal" hidden aria-hidden="true">
+      <div class="cert-modal-backdrop" data-close-cert></div>
+      <div class="cert-modal-box" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+        <button class="cert-modal-close" type="button" data-close-cert aria-label="Close certificate">×</button>
+        <div class="cert-modal-head">
+          <div><span id="certModalProvider"></span><h2 id="certModalTitle"></h2></div>
+          <a id="certModalOpen" href="#" target="_blank" rel="noopener">Open original ↗</a>
+        </div>
+        <div class="cert-viewer" id="certViewer"></div>
+      </div>
+    </div>
 
 
     <!-- INTERESTS -->
