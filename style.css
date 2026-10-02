@@ -387,3 +387,22 @@ main > .section.section-shell + .section.section-shell {
 @keyframes ringSpin{to{transform:rotate(360deg)}}@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @media(max-width:900px){.hero{min-height:auto;padding-top:35px}.hero-visual{order:-1;min-height:410px;margin-bottom:10px}.profile-frame img{width:min(290px,72vw);height:min(290px,72vw)}.ai-system-panel{right:-45px;top:85px;transform:scale(.88)}.code-1,.code-3,.line-1,.line-2{display:none}}
 @media(max-width:600px){.hero-visual{min-height:350px}.ai-system-panel{right:-18px;top:70px;transform:scale(.7);transform-origin:right top}.profile-ring{inset:-14px}.ai-code{font-size:.5rem}}
+/* Achievements + Certifications - Parallel Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.two-column > div {
+  min-width: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
